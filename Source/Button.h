@@ -8,7 +8,7 @@ public:
 	~Button();
 	
 public:
-	void Init(Sprite * _pSprite,Vector2 _vPos, ButtonType _Type);
+	void Init(Sprite * _pSprite,Vector2 _vPos, ButtonType _Type, function<void()> _OnClickFunc);
 	void Update();
 	void Render();
 	void Release();
@@ -18,7 +18,7 @@ private:
 	Rect reRect;
 	Vector2 vPos;
 	Vector2 vScale;
-
+	function<void()> OnClick;
 	ButtonStatus Status;
 	ButtonType Type;
 	D3DXCOLOR RenderColor;

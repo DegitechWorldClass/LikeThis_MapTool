@@ -16,6 +16,8 @@ public:
 	float i = 1280;
 	map <string , Button *> mapButton;
 
+	void OnLoadButtonClick();
+	void OnSaveButtonClick();
 
 };
 

@@ -30,7 +30,11 @@ const Vector2 Left = Vector2(-1, 0);
 const Vector2 Right = Vector2(1, 0);
 const Vector2 Top = Vector2(0, -1);
 const Vector2 Bottom = Vector2(0, 1);
-
+#ifdef UNICODE
+#pragma comment(linker, "/entry:wWinMainCRTStartup /subsystem:console")
+#else
+#pragma comment(linker, "/entry:WinMainCRTStartup /subsystem:console")
+#endif
 using namespace std;
 #include "Rect.h"
 #include "Sprite.h"
